@@ -1,0 +1,209 @@
+/* 
+Lucas COLMAN */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+.container{
+
+}
+
+header {
+  background-color: #f78c6b;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1512058564366-c9e1d31714af') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-texto {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ffbf69;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.boton:hover {
+  background-color: #ffa94d;
+}
+
+.beneficios {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fffaf0;
+}
+
+.beneficios ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.beneficios li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.formulario {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #f78c6b;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e46b4d;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #ffbf69;
+  text-decoration: none;
+}
+
+
+.simulador {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.simulador-form input {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.simulador-form button {
+  padding: 10px 20px;
+  background-color: #6bcf78;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.simulador-form button:hover {
+  background-color: #4caf50;
+}
+
+.resultado {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}

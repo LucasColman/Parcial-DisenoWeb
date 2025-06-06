@@ -1,0 +1,96 @@
+<!-- 
+PARCIAL DISENO WEB - COLMAN LUCAS -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Lucas Colman" />
+    <title>Recetas Fáciles y Económicas</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Menu de navegacion -->
+      <nav>
+        <div class="logo">RecetasFáciles</div>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#suscripcion">Suscribite</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seccion principal -->
+    <main class="container">
+      <section id="inicio" class="hero">
+        <div class="hero-texto">
+          <h1>Recetas Fáciles y Económicas</h1>
+          <p>Comé rico sin gastar de más. Recibí recetas en tu email gratis.</p>
+          <a href="#suscripcion" class="boton">¡Quiero Recetas!</a>
+        </div>
+      </section>
+
+      <section id="beneficios" class="beneficios">
+        <h2>¿Qué vas a recibir?</h2>
+        <ul>
+          <li>✅ Recetas simples y rápidas</li>
+          <li>✅ Ingredientes accesibles</li>
+          <li>✅ Tips para cocinar mejor</li>
+        </ul>
+      </section>
+
+      <section id="suscripcion" class="formulario">
+        <h2>Suscribite ahora</h2>
+        <form
+          action="formulario.php"
+          method="POST"
+          onsubmit="return validarFormulario()"
+        >
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Tu nombre"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Tu correo electrónico"
+          />
+          <button type="submit">Suscribirme</button>
+        </form>
+        <p id="mensajeError" class="error"></p>
+      </section>
+
+      <section id="simulador" class="simulador">
+        <h2>Realiar Descuento</h2>
+        <p>¿Ves Ofertas? Calculá cuánto pagarías con descuento.</p>
+        <div class="simulador-form">
+          <input
+            type="number"
+            id="precioBase"
+            placeholder="Precio original ($)"
+          />
+          <input
+            type="number"
+            id="porcentajeDescuento"
+            placeholder="Descuento (%)"
+          />
+          <button onclick="calcularDescuento()">Calcular</button>
+          <p id="resultadoDescuento" class="resultado"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 RecetasFáciles. Todos los derechos reservados.</p>
+      <p><a href="#inicio">Volver arriba</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
